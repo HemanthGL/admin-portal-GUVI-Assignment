@@ -1,0 +1,15 @@
+<p>market works!</p>
+
+<main class="d-flex justify-content-evenly cards">
+    <div *ngFor="let product of products">
+        <div class="card" style="width: 18rem;">
+            <img src="{{product.photo}}" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{product.productName}}</h5>
+              <p class="card-text">Category: {{product.category}}</p>
+              <p class="card-text">Cost: $ {{product.cost}}</p>
+              <a class="btn btn-primary" (click)="addCart($event)" id="add-{{product.id}}">Add to Cart</a>
+            </div>
+          </div>
+    </div>
+</main>

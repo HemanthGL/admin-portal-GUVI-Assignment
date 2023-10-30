@@ -1,0 +1,43 @@
+<p>products works!</p>
+
+<div class="container" style="margin: 6vh 5vw;">
+    <!-- <p>user works!</p> -->
+    
+    
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th scope="col" class="text-center">ID</th>
+                <th scope="col" class="text-center">Photo</th>
+                <th scope="col" class="text-center">Product Name</th>
+                <th scope="col" class="text-center">Category</th>
+                <th scope="col" class="text-center">Cost</th>
+                <th scope="col" class="text-center">Utilities</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let product of products" id="{{product.id}}" class="text-center">
+                <th scope="row">{{product.id}}</th>
+                <td><img src="{{product.photo}}" alt="" width="30vmax"></td>
+                <td>{{product.productName}}</td>
+                <td>{{product.category }}</td>
+                <td>$ {{product.cost}}</td>
+                <td>
+                    <div class="d-flex justify-content-evenly">
+                        <input type="button" class="btn btn-warning" value="View" (click)="viewProduct($event)" id="view-{{product.id}}">
+                        <input type="button" class="btn btn-primary" value="Edit" (click)="editProduct($event)" id="edit-{{product.id}}">
+                        <input type="button" class="btn btn-danger" value="Delete" id="delete-{{product.id}}">
+                    </div>
+                </td>
+                
+            </tr>
+            <tr>
+                <div class="text-center">
+                    <input type="button" class="btn btn-success" value="Add Products" (click)="addProduct()">
+                </div>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

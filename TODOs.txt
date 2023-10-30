@@ -1,0 +1,14 @@
+http://localhost:4200/user/edit/1
+
+height-overflow-hidden
+
+remove deletes for product, user
+replace delete for prod with add to cart or remove
+
+add forms for register, login
+
+form validation for all forms, create, edit, login, register
+
+console.logs() removal check
+
+JSDoc method Documentations add.

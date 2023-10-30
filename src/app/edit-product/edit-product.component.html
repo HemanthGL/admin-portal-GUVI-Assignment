@@ -1,0 +1,30 @@
+<p>edit-product works!</p>
+
+<div class="container-fluid w-75 p-5">
+    <form [formGroup]="prodForm" (ngSubmit)="onSubmit()" >
+        <h2>Edit Product</h2> <br> <br>
+        <div class="w-50 mx-auto">
+            <label for="first-name" class="">Product Name</label>
+            <input type="text" formControlName="productName" id="first-name" class="form-control">
+        </div>
+
+        <div class="w-50 mx-auto">
+            <label for="last-name">Photo</label>
+            <input type="text" formControlName="photo" id="last-name" class="form-control">
+        </div>
+
+        <div class="w-50 mx-auto">
+            <label for="contact">Category</label>
+            <input type="text" formControlName="category" id="contact" class="form-control">
+        </div>
+
+        <div class="w-50 mx-auto">
+            <label for="email">Cost</label>
+            <input type="text" formControlName="cost" id="email" class="form-control">
+        </div>
+
+        <div class="text-center mt-5">
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,1 @@
+export const PHOTO_URL = 'https://cdn-icons-png.flaticon.com/512/3176/3176151.png'

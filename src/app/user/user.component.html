@@ -1,0 +1,77 @@
+<div class="container" style="margin: 6vh 5vw;">
+    <p>user works!</p>
+    
+    
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th scope="col" class="text-center">ID</th>
+                <th scope="col" class="text-center">Photo</th>
+                <th scope="col" class="text-center">First Name</th>
+                <th scope="col" class="text-center">Last Name</th>
+                <th scope="col" class="text-center">Contact Number</th>
+                <th scope="col" class="text-center">Email ID</th>
+                <th scope="col" class="text-center">Address</th>
+                <th scope="col" class="text-center">Utilities</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let user of users" id="{{user.id}}" class="text-center">
+                <th scope="row">{{user.id}}</th>
+                <td><img src="{{user.photo}}" alt="" width="30vmax"></td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.secondName}}</td>
+                <td>{{user.contactNo}}</td>
+                <td>{{user.emailId }}</td>
+                <td>{{user.billingAddress}}</td>
+                <td class="d-flex justify-content-between">
+                    <input type="button" class="btn btn-warning" value="View" (click)="viewUser($event)" id="view-{{user.id}}">
+                    <input type="button" class="btn btn-primary" value="Edit" (click)="editUser($event)" id="edit-{{user.id}}">
+                    <input type="button" class="btn btn-danger" value="Delete">
+                </td>
+                
+            </tr>
+            <tr>
+                <div class="text-center">
+                    <input type="button" class="btn btn-success" value="Add More Users" (click)="addUser()">
+                </div>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!-- PAGE -->
+<!-- view the users in a table -->
+
+
+
+
+
+
+<!-- other pages -->
+
+<!-- viewUser: view the user in a single card format -->
+<!-- editUser: give functionality to edit user in a card FORM -->
+<!-- deleteUser: delete a user ?? Optional -->
+
+
+<!-- viewProduct: view the Product in a single card format -->
+<!-- editProduct: give functionality to edit Product in a card FORM -->
+<!-- deleteProduct: delete a Product ?? Optional -->
+
+<!-- market: displace all products in a grid of product cards -->
+<!-- cart: show all products stored in cart in form of cards -->
+
+<!-- utilize cards already implemented in bookstore, other assignments -->
+
+
+<!-- SERVICES -->
+
+<!-- 
+store Users
+store Products
+store Cart Data
+Data 
+-->
