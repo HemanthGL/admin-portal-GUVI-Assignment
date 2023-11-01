@@ -45,9 +45,7 @@ export class RegisterComponent {
     }, {
       validators: this.passwordConfirm()
     })
-    
-    console.log(this.registerF.get('password')?.value == "")
-    console.log('logged')
+
   }
 
   /**
