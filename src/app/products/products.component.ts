@@ -13,14 +13,25 @@ export class ProductsComponent {
   constructor(private router: Router, private productServ: ProductsService){
     this.products = productServ.products
 
-    console.log(this.products)
   }
+
+  /**
+   * 
+   * @param event Clicking the Edit Product Button
+   * @description To Handle Edit Product Button event
+   */
   editProduct(event: MouseEvent){
     let id:string = (event.target as HTMLInputElement).id
 
     let prodIdx: number = parseInt(id.substring(5))
     this.router.navigate(['/product/edit/'+ prodIdx])
   }
+
+  /**
+   * 
+   * @param event Click event of View Button of Product
+   * @description To Handle View Product Button event
+   */
   viewProduct(event: MouseEvent){
     let id:string = (event.target as HTMLInputElement).id
 
@@ -28,6 +39,9 @@ export class ProductsComponent {
     this.router.navigate(['/product/'+ prodIdx])
   }
 
+  /**
+   * @description to Add More Products to the list [Button event Handler]
+   */
   addProduct():void{
     this.router.navigate(['product/create'])
   }

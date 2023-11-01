@@ -47,7 +47,6 @@ export class UsersService {
    */
   getUserById(id: number): IUser{
     let data = this.users.find((ele: IUser) => ele.id == id)!
-    console.log('user to be edited is : ', data)
     return data;
     // TODO: Add edge case, user not Found
   }
@@ -113,8 +112,6 @@ export class UsersService {
    * @returns status Code after editing record
    */
   editUser(userId: number, formData: IFormUser){
-    console.log(userId)
-    console.log(formData)
 
     let userObj:IUser = this.getUserById(userId)
     if (formData.firstName == userObj.firstName && formData.lastName ==  userObj.secondName && formData.address == userObj.billingAddress && parseInt(formData.contact) == userObj.contactNo){

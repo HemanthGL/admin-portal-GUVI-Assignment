@@ -11,7 +11,7 @@ export class AppComponent implements OnInit, AfterViewInit{
 
     constructor() { }
 
-    // for Feather Icons to works
+    // for Feather Icons to work
     ngOnInit(): void {
 
     }

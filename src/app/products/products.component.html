@@ -1,8 +1,7 @@
-<p>products works!</p>
-
 <div class="container" style="margin: 6vh 5vw;">
     <!-- <p>user works!</p> -->
     
+    <p class="display-5 lead mb-5">Product Portfolio</p>
     
     <table class="table table-striped" >
         <thead>
@@ -27,7 +26,7 @@
                     <div class="d-flex justify-content-evenly">
                         <input type="button" class="btn btn-warning" value="View" (click)="viewProduct($event)" id="view-{{product.id}}">
                         <input type="button" class="btn btn-primary" value="Edit" (click)="editProduct($event)" id="edit-{{product.id}}">
-                        <input type="button" class="btn btn-danger" value="Delete" id="delete-{{product.id}}">
+                        
                     </div>
                 </td>
                 

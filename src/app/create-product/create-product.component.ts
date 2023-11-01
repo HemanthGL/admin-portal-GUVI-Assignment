@@ -31,9 +31,11 @@ export class CreateProductComponent {
   })
 
   prodSub?: IProduct
+
+  /**
+   * @description: On Valid Submission of the create Product Form
+   */
   onSubmit(){
-    // console.log(this.userForm.controls)
-    // console.log(this.userServ.getUsersLength())
 
     this.prodSub = {
         id : this.prodServe.getProductsLength() + 1,
@@ -45,7 +47,5 @@ export class CreateProductComponent {
     this.prodServe.addProduct(this.prodSub)
 
     this.router.navigate(['/products'])
-   
-    // console.log(this.userServ.getUsersLength())
   }
 }

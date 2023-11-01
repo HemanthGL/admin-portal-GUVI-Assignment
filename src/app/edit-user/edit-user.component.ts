@@ -43,8 +43,10 @@ export class EditUserComponent {
     })
   }
 
+  /**
+   * @description On Valid Submission of Edit User Form
+   */
   onSubmit(){
-    console.log(typeof(this.userForm.value))
     let status = this.userServ.editUser(this.id, this.userForm.value)
     if (status == -1){
       alert('No Changes in details or No such User Registered')

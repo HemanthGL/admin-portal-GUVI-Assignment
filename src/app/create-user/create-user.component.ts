@@ -37,9 +37,11 @@ export class CreateUserComponent {
   })
 
   userSub?: IUser
+
+  /**
+   * @description On Valid Submission of Create User Form
+   */
   onSubmit(){
-    console.log(this.userForm.controls)
-    console.log(this.userServ.getUsersLength())
 
     this.userSub = {
         id : this.userServ.getUsersLength() + 1,
@@ -51,8 +53,6 @@ export class CreateUserComponent {
         photo: PHOTO_URL,
     }
     this.userServ.addUser(this.userSub)
-
-    console.log(this.userServ.getUsersLength())
 
     this.router.navigate(['/users'])
   }

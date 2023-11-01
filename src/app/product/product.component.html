@@ -1,11 +1,12 @@
-<p class="mt-5">product works!</p>
+<section class="container-fluid pt-5 ps-5">
+    <p class="display-5 lead ms-5">Product View</p>
+    <div class="container-fluid mt-5 mx-auto text-center">
+        <img src="{{product.photo}}" alt="" srcset="" style="height: 36vh;" class="mt-5">
+        <h2 class="m-4">{{product.productName}}</h2>
+        <p class="lead">Category: <b>{{product.category}}</b></p>
+        <p class="lead">Cost: <b>${{product.cost}}</b></p>
+        <!-- <p class="lead">Address: <b>{{user.billingAddress}}</b></p> -->
+    </div>
+</section>
 
 
-
-<div class="container-fluid mt-5 mx-auto text-center">
-    <img src="{{product.photo}}" alt="" srcset="" style="height: 36vh;" class="mt-5">
-    <h2 class="m-4">{{product.productName}}</h2>
-    <p class="lead">Category: <b>{{product.category}}</b></p>
-    <p class="lead">Cost: <b>${{product.cost}}</b></p>
-    <!-- <p class="lead">Address: <b>{{user.billingAddress}}</b></p> -->
-</div>

@@ -33,27 +33,53 @@ export class ProductsService {
     }
   ]
 
+  /**
+   * 
+   * @param prodID Unique Product ID
+   * @returns index of the product in the products Array
+   */
   getProductById(prodID: number): number{
     let idx = this.products.findIndex((product: IProduct) => product.id == prodID)
 
     return idx;
   }
 
+  /**
+   * 
+   * @returns Total no. of Products in the products Array
+   */
   getProductsLength(): number {
     return this.products.length;
   }
 
+  /**
+   * 
+   * @param product Product Object
+   * @description Adds Product to the Product Portfolio/Array
+   */
   addProduct(product: IProduct){
     this.products.push(product)
   }
 
+  /**
+   * 
+   * @param prodId Unique Product ID
+   * @returns index of product in the Product Portfolio
+   */
   findProdIndex(prodId: number){
     let idx = this.products.findIndex((prod: IProduct) => prod.id == prodId)
 
     return idx;
   }
   
-  editProd(prodId: number, formData: IFormProduct){
+
+  /**
+   * 
+   * @param prodId Unique Product ID
+   * @param formData Data from Form for Edit Product
+   * @returns status Code for succes/failure
+   */
+  editProd(prodId: number, formData: IFormProduct): number{
 
     let prodObj:IProduct = this.products[this.getProductById(prodId)]
 

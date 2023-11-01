@@ -1,8 +1,11 @@
 
-<div class="container-fluid mt-5 mx-auto text-center">
-    <img src="{{user.photo}}" alt="" srcset="" style="height: 36vh;" class="mt-5">
-    <h2 class="m-4">{{user.firstName}} {{user.secondName}}</h2>
-    <p class="lead">Contact: <b>{{user.contactNo}}</b></p>
-    <p class="lead">Email: <b>{{user.emailId}}</b></p>
-    <p class="lead">Address: <b>{{user.billingAddress}}</b></p>
-</div>
+<section class="container-fluid ps-5 pt-5">
+    <p class="display-5 lead ms-5 ps-5 mt-5">User View</p>
+    <div class="container-fluid  mx-auto text-center">
+        <img src="{{user.photo}}" alt="" srcset="" style="height: 36vh;" class="mt-5">
+        <h2 class="m-4">{{user.firstName}} {{user.secondName}}</h2>
+        <p class="lead">Contact: <b>{{user.contactNo}}</b></p>
+        <p class="lead">Email: <b>{{user.emailId}}</b></p>
+        <p class="lead">Address: <b>{{user.billingAddress}}</b></p>
+    </div>
+</section>

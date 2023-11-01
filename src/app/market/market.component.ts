@@ -14,11 +14,15 @@ export class MarketComponent {
     this.products = prodServe.products;
   }
 
+  /**
+   * 
+   * @param event On Clicking Add to Cart Button
+   * @description event Handler method for clicking Add to Cart
+   */
   addCart(event: MouseEvent){
     let id = (event.target as HTMLElement).id;
 
     let prodIdx: number = parseInt(id.substring(4))
-    console.log(prodIdx)
     
     // logic for local storage set cart value
     

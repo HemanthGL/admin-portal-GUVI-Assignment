@@ -39,6 +39,9 @@ export class EditProductComponent {
     })
   }
 
+  /**
+   * @description On Valid Submission of Edit Product Form
+   */
   onSubmit(){
 
     let status = this.prodServe.editProd(this.id, this.prodForm.value)

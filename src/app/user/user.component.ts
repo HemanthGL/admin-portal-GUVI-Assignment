@@ -15,23 +15,33 @@ export class UserComponent {
     this.users = this.userService.users
   }
   
+  /**
+   * 
+   * @param event Clicking Edit User Button
+   * @description Event Handler for Edit User Button
+   */
   editUser(event: MouseEvent){
     let id:string = (event.target as HTMLInputElement).id
 
     let userIdx: number = parseInt(id.substring(5))
-    // console.log(prodIdx )
-    // console.log('is the event')
     this.router.navigate(['/user/edit/'+ userIdx])
   }
+
+  /**
+   * 
+   * @param event Clicking View User Button
+   * @description Event Handler for View User Button
+   */
   viewUser(event: MouseEvent){
     let id:string = (event.target as HTMLInputElement).id
 
     let userIdx: number = parseInt(id.substring(5))
-    // console.log(prodIdx )
-    // console.log('is the event')
     this.router.navigate(['/user/'+ userIdx])
   }
 
+  /**
+   * @description Routes to the Create User Component
+   */
   addUser():void{
     this.router.navigate(['/user/create'])
   }
